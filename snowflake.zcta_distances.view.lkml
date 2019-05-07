@@ -3,7 +3,7 @@ view: sf_zcta_distances {
   derived_table: {
     sql: SELECT *
           FROM
-        ACS.ZCTA_DISTANCES
+        LOOKER_DATABLOCKS.ACS.ZCTA_DISTANCES
         WHERE
           zip1 = {% parameter zcta_distances.zip1 %}
           --AND _TABLE_SUFFIX = SUBSTR( {% parameter zcta_distances.zip1 %}, 0, 1)

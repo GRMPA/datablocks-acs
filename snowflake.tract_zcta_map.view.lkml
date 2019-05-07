@@ -5,7 +5,7 @@ view: sf_tract_zcta_map {
     sql:
       SELECT geoid, ZCTA5  FROM
       (select *,  ROW_NUMBER() OVER (PARTITION BY GEOID ORDER BY ZPOPPCT DESC) row_num
-      from ACS.ZCTA_TO_TRACT_W_STATE)
+      from LOOKER_DATABLOCKS.ACS.ZCTA_TO_TRACT_W_STATE)
       WHERE row_num = 1;;
     persist_for: "10000 hours"
   }

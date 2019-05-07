@@ -1,5 +1,5 @@
 view: sf_block_group_facts {
-  sql_table_name: ACS.FAST_FACTS ;;
+  sql_table_name: LOOKER_DATABLOCKS.ACS.FAST_FACTS ;;
 
   dimension: logrecno_bg_map_block_group {
     hidden: yes
