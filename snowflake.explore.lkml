@@ -2,7 +2,7 @@ include: "snowflake.*.view.lkml"
 
 
 explore: fast_facts {
-  label: "Demographics"
+  label: "Census Demographics"
   description: "U.S. demographic information (Source: Census Bureau's American Community Survey (ACS))"
   from: sf_logrecno_bg_map
 
