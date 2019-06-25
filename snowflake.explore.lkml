@@ -1,10 +1,15 @@
 include: "snowflake.*.view.lkml"
 
+access_grant: datablocks {
+  user_attribute: access_datablocks
+  allowed_values: ["yes"]
+}
 
 explore: fast_facts {
   label: "Census Demographics"
   description: "U.S. demographic information (Source: Census Bureau's American Community Survey (ACS))"
   from: sf_logrecno_bg_map
+  required_access_grants: [datablocks]
 
   join: block_group_facts {
     from: sf_block_group_facts
